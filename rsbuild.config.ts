@@ -5,6 +5,9 @@ import { pluginBabel } from '@rsbuild/plugin-babel'
 import { pluginReact } from '@rsbuild/plugin-react'
 
 export default defineConfig({
+  dev: {
+    writeToDisk: false,
+  },
   source: {
     entry: {
       index: './src/index.tsx',
@@ -28,20 +31,12 @@ export default defineConfig({
     template: './index.html',
     templateParameters: {
       title: 'Xiaoshu Web Demo',
-      BASE_URL: './',
     },
   },
-  // performance: {
-  //   chunkSplit: {
-  //     strategy: 'split-by-experience',
-  //   },
-  // },
   plugins: [
     pluginReact(),
-    pluginBabel({
-      babelLoaderOptions: (_, { addPlugins }) => {
-        addPlugins(['react-native-web'])
-      },
+    pluginBabel((_, { addPlugins }) => {
+      addPlugins(['react-native-web'])
     }),
   ],
 })
