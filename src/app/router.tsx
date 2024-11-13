@@ -36,6 +36,10 @@ const Router = () => {
           path="/details/:id"
           element={buildRouteSuspense(lazy(() => import('../pages/details')))}
         />
+        <Route
+          path="/tree"
+          element={buildRouteSuspense(lazy(() => import('../pages/tree')))}
+        />
       </Routes>
     </HashRouter>
   )

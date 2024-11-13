@@ -26,6 +26,7 @@ const Home = () => {
         </Button>
         <Link to="/user-center">Go User Center</Link>
         <Link to="/list">Go List</Link>
+        <Link to="/tree">Go Tree</Link>
       </Space>
     </>
   )
