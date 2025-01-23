@@ -12,14 +12,14 @@
     "build:pulish-safe": "git subtree push --prefix dist origin gh-pages",
     "build:pulish": "git push origin `git subtree split --prefix dist main`:gh-pages --force",
     "build:reset": "git reset --hard HEAD^",
-    "ncu": "npx npm-check-updates -u -x typescript,react,react-dom,react-router-dom,react-native-svg",
+    "ncu": "npx npm-check-updates -u -x typescript,react,react-dom,@types/react,@types/react-dom,react-router-dom,react-native-svg",
     "eslint": "eslint src --ext .ts,.tsx",
     "lint:ts": "tsc --noEmit && eslint src --ext .ts,.tsx"
   },
   "dependencies": {
     "@fruits-chain/design-tokens-bailu": "^0.1.0",
     "@fruits-chain/react-native-xiaoshu": "^0.4.2",
-    "expo-dev-menu": "^6.0.16",
+    "expo-dev-menu": "^6.0.18",
     "rc-field-form": "^2.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -31,12 +31,12 @@
   "devDependencies": {
     "@fruits-chain/eslint-config-rn": "^0.3.23",
     "@fruits-chain/prettier-config-preset": "^0.0.5",
-    "@rsbuild/core": "1.1.13",
+    "@rsbuild/core": "1.2.1",
     "@rsbuild/plugin-babel": "1.0.3",
     "@rsbuild/plugin-react": "1.1.0",
-    "@types/node": "^22.10.5",
-    "@types/react": "^19.0.6",
-    "@types/react-dom": "^19.0.3",
+    "@types/node": "^22.10.9",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "@types/react-native": "^0.73.0",
     "babel-plugin-react-native-web": "^0.19.13",
     "typescript": "~5.3.3"
