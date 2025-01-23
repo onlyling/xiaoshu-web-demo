@@ -35,8 +35,10 @@ export default defineConfig({
   },
   plugins: [
     pluginReact(),
-    pluginBabel((_, { addPlugins }) => {
-      addPlugins(['react-native-web'])
+    pluginBabel({
+      babelLoaderOptions: (_config, { addPlugins }) => {
+        addPlugins(['react-native-web'])
+      },
     }),
   ],
 })
